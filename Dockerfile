@@ -40,6 +40,5 @@ RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
 RUN git clone https://github.com/x4nth055/emotion-recognition-using-speech.git;\
 	cd /emotion-recognition-using-speech; \
 	pip install -r requirements.txt
-	
-	
-CMD ['./speaker-diarization/spk-diarization2.py ../out.wav', 'ls | sort -n',  
+
+RUN git clone https://github.com/X360pro/watersheep.git
