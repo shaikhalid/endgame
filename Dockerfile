@@ -21,8 +21,7 @@ RUN dnf groupinstall -y "Development Tools"; \
         swig \
         gcc-c++
 
-RUN pip install pyaudio; \
-    pip3 install pyaudio
+RUN pip install pyaudio
 
 RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
     cd AaltoASR; \
