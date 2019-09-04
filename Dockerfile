@@ -21,7 +21,7 @@ RUN dnf groupinstall -y "Development Tools"; \
         swig \
         gcc-c++
 
-RUN pip install pyaudio
+RUN pip install pyaudio; \
     pip3 install pyaudio
 
 RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
@@ -38,13 +38,13 @@ RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
     ln -s ../AaltoASR ./ ; \
     ln -s ../AaltoASR/build ./ ; \
     ln -s ../AaltoASR/build/aku/feacat ./ ; \
-    pip install numpy scipy docopt
+    pip install numpy scipy docopt; \
     pip3 install numpy scipy docopt
 
 #emotion analysis    
 RUN git clone https://github.com/x4nth055/emotion-recognition-using-speech.git;\
 	cd /emotion-recognition-using-speech; \
-	pip install -r requirements.txt
+	pip install -r requirements.txt; \
 	pip3 install -r requirements.txt
 
 RUN git clone https://github.com/X360pro/watersheep.git
