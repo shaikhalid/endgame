@@ -10,6 +10,9 @@ RUN dnf install -y ffmpeg
 # required development tools
 RUN dnf groupinstall -y "Development Tools"; \
     yum install -y portaudio-devel alsa-lib-devel portaudio; \
+    sudo yum install python-devel; \
+    sudo yum install libevent-devel; \
+    sudo easy_install gevent; \
     dnf install -y https://kojipkgs.fedoraproject.org//packages/cmake/2.8.12.2/2.fc21/x86_64/cmake-2.8.12.2-2.fc21.x86_64.rpm \
         SDL-devel \
         python-devel \
