@@ -21,9 +21,9 @@ RUN dnf groupinstall -y "Development Tools"; \
         swig \
         gcc-c++
 	
-RUN sudo yum install python-devel; \
-    sudo yum install libevent-devel; \
-    sudo easy_install gevent
+RUN yum install python-devel; \
+    yum install libevent-devel; \
+    easy_install gevent
 
 RUN pip install pyaudio
 
