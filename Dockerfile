@@ -21,7 +21,8 @@ RUN dnf groupinstall -y "Development Tools"; \
         swig \
         gcc-c++
 	
-RUN yum install python-devel
+RUN dnf install -y python-devel; \
+    dnf install -y python3-devel
 
 RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
     cd AaltoASR; \
