@@ -22,10 +22,6 @@ RUN dnf groupinstall -y "Development Tools"; \
         gcc-c++
 	
 RUN yum install python-devel; \
-    yum install libevent-devel; \
-    easy_install gevent
-
-RUN pip install pyaudio
 
 RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
     cd AaltoASR; \
