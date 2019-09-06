@@ -32,7 +32,7 @@ RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
     make install
 
 # The diarizer proper
-RUN git config http.postBuffer 524288000
+RUN git config --global http.postBuffer 157286400
  
 RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
     cd /speaker-diarization; \
