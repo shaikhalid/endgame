@@ -22,7 +22,11 @@ RUN dnf groupinstall -y "Development Tools"; \
         gcc-c++
 	
 RUN dnf install -y python-devel; \
-    dnf install -y python3-devel
+    dnf install -y python3-devel; \
+    yum install -y nano; \
+    yum install -y python3-tkinter; \
+    mkdir exported; \
+    pip3 install pydub
 
 RUN git clone https://github.com/aalto-speech/AaltoASR.git; \
     cd AaltoASR; \
@@ -47,6 +51,7 @@ RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
 RUN git clone https://github.com/x4nth055/emotion-recognition-using-speech.git;\
 	cd /emotion-recognition-using-speech; \
 	pip install -r requirements.txt; \
-	pip3 install -r requirements.txt
+	pip3 install -r requirements.txt; \
+	mv emotion-recognition-using-speech erus
 
 RUN git clone https://github.com/X360pro/watersheep.git
