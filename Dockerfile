@@ -50,7 +50,7 @@ RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
     pip3 install requests
 
 #emotion analysis    
-RUN git clone https://github.com/x4nth055/emotion-recognition-using-speech.git;\
+RUN git clone https://github.com/shaikhalid/emotion-recognition-using-speech.git; \
 	cd /emotion-recognition-using-speech; \
 	pip install -r requirements.txt; \
 	pip3 install -r requirements.txt; \
