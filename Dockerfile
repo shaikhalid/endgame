@@ -45,7 +45,9 @@ RUN git clone https://github.com/aalto-speech/speaker-diarization.git; \
     ln -s ../AaltoASR/build ./ ; \
     ln -s ../AaltoASR/build/aku/feacat ./ ; \
     pip install numpy scipy docopt; \
-    pip3 install numpy scipy docopt
+    pip3 install numpy scipy docopt; \
+    pip install requests; \
+    pip3 install requests
 
 #emotion analysis    
 RUN git clone https://github.com/x4nth055/emotion-recognition-using-speech.git;\
