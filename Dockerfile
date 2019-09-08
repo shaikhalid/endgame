@@ -1,7 +1,7 @@
 
 FROM fedora
 
-LABEL authors="Brian Cunnie <brian.cunnie@gmail.com>, Brendan Cunnie <saintbrendan@gmail.com>, Tran Tu <trand.tu@gmail.com>"
+LABEL authors="Watersheep"
 
 # for converting audio files to wav
 RUN dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -54,6 +54,7 @@ RUN git clone https://github.com/shaikhalid/emotion-recognition-using-speech.git
 	cd /emotion-recognition-using-speech; \
 	pip install -r requirements.txt; \
 	pip3 install -r requirements.txt; \
+	cd /;\
 	mv emotion-recognition-using-speech erus
 
 RUN git clone https://github.com/X360pro/watersheep.git
